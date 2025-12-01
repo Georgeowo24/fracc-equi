@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento</title>
+
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/splash.css">
+    <link rel="stylesheet" href="./src/styles/training.css">
+
+    <link rel="icon" href="./src/images/Logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="./src/images/Logo.svg" alt="Logo Fracciones Equivalentes" class="splash-logo">
+            <h1 class="splash-text">Fracciones Equivalentes</h1>
+        </div>
+    </div>
+
+    <header>
+        <div id="header-blue"></div>
+        <a href="./index.html"><img src="./src/images/Logo.svg" alt="Logo Fracciones Equivalentes" class="header-logo"></a>
+    </header>
+
+    <main id="training-content">
+        <h1>Fracciones equivalentes - Ejercicios</h1>
+        
+        <p class="score-display">Aciertos: <span id="score-count">0</span></p>
+
+        <div class="exercise-container">
+            <div class="fraction-block given-fraction">
+                <div id="chart-left" class="pie-chart-container"></div>
+                <div class="fraction-numbers static">
+                    <span id="num-left">1</span>
+                    <div class="fraction-line"></div>
+                    <span id="den-left">2</span>
+                </div>
+            </div>
+
+            <div class="equal-sign">=</div>
+
+            <div class="fraction-block user-fraction">
+                 <div id="chart-right" class="pie-chart-container"></div>
+                <div class="fraction-numbers inputs">
+                    <input type="number" id="num-input" min="1" placeholder="?">
+                    <div class="fraction-line"></div>
+                    <input type="number" id="den-input" min="1" placeholder="?">
+                </div>
+            </div>
+        </div>
+
+        <div class="feedback-message" id="feedback"></div>
+
+        <footer class="footer-bar">
+            <button id="btn-check" class="exercise-button">Comprobar</button>
+        </footer>
+    </main>
+
+    <script src="./src/JS/splash.js"></script>
+    <script src="./src/JS/training.js"></script>
+</body>
+</html>

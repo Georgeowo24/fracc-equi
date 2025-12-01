@@ -1,0 +1,100 @@
+/* src/styles/training.css */
+
+#training-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.score-display {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Contenedor principal del ejercicio (flex para alinear horizontalmente) */
+.exercise-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Bloques individuales de fracción (izquierda y derecha) */
+.fraction-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+
+/* Estilos para los contenedores de las gráficas SVG */
+.pie-chart-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    /* Los SVGs se generan dentro de esto */
+}
+
+/* Estilos generales para los números de la fracción */
+.fraction-numbers {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Línea separadora de la fracción */
+.fraction-line {
+    width: 80%;
+    height: 4px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+/* Estilos específicos para los INPUTS del usuario */
+.fraction-numbers.inputs input {
+    width: 60px;
+    height: 60px;
+    font-size: 0.8em; /* Un poco más pequeño dentro del input */
+    text-align: center;
+    border: 3px solid #333;
+    border-radius: 8px;
+    
+}
+.fraction-numbers.inputs input::-webkit-outer-spin-button,
+.fraction-numbers.inputs input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Signo de igual gigante */
+.equal-sign {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+/* Mensaje de retroalimentación (Correcto/Incorrecto) */
+.feedback-message {
+    height: 30px; /* Espacio reservado */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.feedback-message.success { color: #2e7d32; }
+.feedback-message.error { color: #d32f2f; }
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    .exercise-container {
+        flex-direction: column; /* Apilar verticalmente en pantallas pequeñas */
+        gap: 15px;
+    }
+    .equal-sign {
+        transform: rotate(90deg); /* Girar el igual si se apilan */
+        margin: 10px 0;
+    }
+}

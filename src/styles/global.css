@@ -1,0 +1,53 @@
+body {
+    background-color: #F9FCFF; 
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#header-blue {
+    width: 100%;
+    height: 80px;
+    background-color: #081F5C; 
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 30px solid #081F5C;
+    margin-top: -110px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exercise-button {
+    background-color: #334EAC; 
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.exercise-button:hover {
+    background-color: #081F5C; 
+}
