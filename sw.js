@@ -11,7 +11,10 @@ const ASSETS_TO_CACHE = [
     './src/JS/training.js',
     './src/images/Logo.svg',
     './src/images/Logo.png',
-    './src/images/Example.png'
+    './src/images/Example.png',
+    './src/images/icon-192.png',
+    './src/images/icon-512.png',
+    './src/images/AppWeb.png'
 ];
 
 // Guardamos los archivos en caché
