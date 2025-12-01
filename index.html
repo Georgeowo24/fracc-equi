@@ -83,11 +83,20 @@
 
         <footer class="footer-bar">
             <a href="./training.html"><button class="exercise-button">Ejercicios</button></a>
+
+            <button id="btn-notify-loc" class="exercise-button" style="margin-top: 20px; background-color: #009688;">
+                🔔 Recordatorio Local
+            </button>
+
+            <button id="btn-notify-ext" class="exercise-button" style="margin-top: 20px; background-color: #e91e63;">
+                🚀 Push Server
+            </button>
         </footer>
     </div>
 
     <script src="./src/JS/splash.js"></script>
-        <script>
+    
+    <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw.js')
@@ -96,5 +105,8 @@
             });
         }
     </script>
+
+    <script src="./src/JS/localNotification.js"></script>
+    <script src="./src/JS/externalNotifications.js"></script>
 </body>
 </html>
