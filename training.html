@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./src/styles/training.css">
 
     <link rel="icon" href="./src/images/Logo.svg" type="image/svg+xml">
+
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#081F5C">
+    <link rel="apple-touch-icon" href="./src/images/Logo.png">
 </head>
 <body>
     <div id="splash-screen">
@@ -60,5 +64,14 @@
 
     <script src="./src/JS/splash.js"></script>
     <script src="./src/JS/training.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then((reg) => console.log('Service Worker registrado', reg))
+                    .catch((err) => console.log('Error al registrar SW', err));
+            });
+        }
+    </script>
 </body>
 </html>
