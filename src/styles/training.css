@@ -1,46 +1,46 @@
-/* src/styles/training.css */
-
-#training-content {
-    max-width: 800px;
+/* CONTENEDOR GENERAL */
+#main-content {
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
 
+/* MARCADOR DE ACIERTOS */
 .score-display {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 40px;
 }
 
-/* Contenedor principal del ejercicio (flex para alinear horizontalmente) */
+/* CONTENEDOR PRINCIPAL DEL EJERCICIO */
 .exercise-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;     /* Permite que se acomode responsivamente */
     gap: 30px;
     margin-bottom: 30px;
 }
 
-/* Bloques individuales de fracción (izquierda y derecha) */
+/* BLOQUES DE FRACCIÓN */
 .fraction-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 180px;
 }
 
-/* Estilos para los contenedores de las gráficas SVG */
+/* PIE CHART */
 .pie-chart-container {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     margin-bottom: 20px;
-    /* Los SVGs se generan dentro de esto */
 }
 
-/* Estilos generales para los números de la fracción */
+/* NÚMEROS DE FRACCIÓN */
 .fraction-numbers {
-    font-size: 2.5em;
+    font-size: 2.4em;
     font-weight: bold;
     color: #000;
     display: flex;
@@ -48,53 +48,120 @@
     align-items: center;
 }
 
-/* Línea separadora de la fracción */
+/* LÍNEA DEL MEDIO */
 .fraction-line {
-    width: 80%;
+    width: 90%;
     height: 4px;
     background-color: #000;
     margin: 5px 0;
 }
 
-/* Estilos específicos para los INPUTS del usuario */
+/* INPUTS */
 .fraction-numbers.inputs input {
-    width: 60px;
-    height: 60px;
-    font-size: 0.8em; /* Un poco más pequeño dentro del input */
+    width: 65px;
+    height: 65px;
+    font-size: 1em;
     text-align: center;
     border: 3px solid #333;
-    border-radius: 8px;
-    
+    border-radius: 10px;
 }
+
 .fraction-numbers.inputs input::-webkit-outer-spin-button,
 .fraction-numbers.inputs input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* Signo de igual gigante */
+/* SIGNO DE IGUAL */
 .equal-sign {
     font-size: 4em;
     font-weight: bold;
 }
 
-/* Mensaje de retroalimentación (Correcto/Incorrecto) */
+/* MENSAJE FEEDBACK */
 .feedback-message {
-    height: 30px; /* Espacio reservado */
+    min-height: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.feedback-message.success { color: #2e7d32; }
-.feedback-message.error { color: #d32f2f; }
 
-/* Responsive para móviles */
+.feedback-message.success {
+    color: #2e7d32;
+}
+
+.feedback-message.error {
+    color: #d32f2f;
+}
+
+/* -------------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------------- */
+
+/* TABLET */
+@media (max-width: 900px) {
+    .fraction-block {
+        width: 150px;
+    }
+
+    .pie-chart-container {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* MÓVILES GRANDES */
 @media (max-width: 600px) {
     .exercise-container {
-        flex-direction: column; /* Apilar verticalmente en pantallas pequeñas */
-        gap: 15px;
+        flex-direction: column;
+        gap: 20px;
     }
+
     .equal-sign {
-        transform: rotate(90deg); /* Girar el igual si se apilan */
-        margin: 10px 0;
+        transform: rotate(90deg);
+    }
+
+    .fraction-block {
+        width: 130px;
+    }
+
+    .pie-chart-container {
+        width: 110px;
+        height: 110px;
+    }
+
+    .fraction-numbers {
+        font-size: 2em;
+    }
+
+    .fraction-numbers.inputs input {
+        width: 55px;
+        height: 55px;
+        font-size: 0.9em;
+    }
+}
+
+/* MÓVILES PEQUEÑOS */
+@media (max-width: 400px) {
+    .fraction-block {
+        width: 110px;
+    }
+
+    .pie-chart-container {
+        width: 90px;
+        height: 90px;
+    }
+
+    .fraction-numbers {
+        font-size: 1.7em;
+    }
+
+    .equal-sign {
+        font-size: 3em;
+    }
+
+    .fraction-numbers.inputs input {
+        width: 45px;
+        height: 45px;
+        font-size: 0.8em;
     }
 }

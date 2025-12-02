@@ -28,7 +28,7 @@
         <a href="./index.html"><img src="./src/images/Logo.svg" alt="Logo Fracciones Equivalentes" class="header-logo"></a>
     </header>
 
-    <main id="training-content">
+    <main id="main-content" style="display:none;">
         <h1>Fracciones equivalentes - Ejercicios</h1>
         
         <p class="score-display">Aciertos: <span id="score-count">0</span></p>
@@ -63,7 +63,7 @@
     </main>
 
     <script src="./src/JS/splash.js"></script>
-    <script src="./src/JS/training.js"></script>
+    <script type="module" src="./src/JS/training.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

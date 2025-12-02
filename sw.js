@@ -9,6 +9,8 @@ const ASSETS_TO_CACHE = [
     './src/styles/training.css',
     './src/JS/splash.js',
     './src/JS/training.js',
+    'src/JS/FractionGame.js',
+    './src/JS/PieChart.js',
     './src/JS/localNotification.js',
     './src/JS/externalNotifications.js',
     './src/images/Logo.svg',
